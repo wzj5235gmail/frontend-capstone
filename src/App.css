@@ -1,38 +1,406 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+}
+
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+a:hover {
+  color: black;
+  transition-duration: .2s;
+}
+
+button {
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  border-width: 0;
+  background-color: #F4CE14;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: black;
+  color: #F4CE14;
+  transition-duration: .2s;
+}
+
+h1 {
+  font-size: 64px;
+  font-family: 'Markazi Text', serif;
+  font-weight: normal;
+}
+
+img {
+  object-fit: cover;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+/* Header */
+
+.header {
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 858px;
+  margin: 0 auto;
+  height: 76px;
+}
+
+/* Navigation */
+
+.nav-item a {
+  font-weight: Bold;
+  font-size: 18px;
+}
+
+/* Footer */
+
+.footer-container {
+  background-color: #495E57;
+  width: 100%;
+}
+
+.footer {
+  justify-content: space-between;
+  height: 300px;
+  align-items: center;
+  width: 858px;
+  margin: 0 auto;
+}
+
+.footer .links {
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.footer * {
+  color: #EDEFEE;
+  margin-bottom: .5rem;
+}
+
+.footer a:hover {
+  color: #EE9972;
+}
+
+.footer h3 {
+  color: #F4CE14;
+  font-weight: bold;
+}
+
+/* Hero */
+
+.hero {
+  background-color: #495E57;
+  height: 400px;
+  align-items: center;
+}
+
+.hero a {
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  border-width: 0;
+  background-color: #F4CE14;
+  font-weight: bold;
+}
+
+.hero a:hover {
+  background-color: black;
+  color: #F4CE14;
+  transition-duration: .2s;
+}
+
+.hero-content {
+  width: 858px;
+  margin: 0 auto;
+  color: #EDEFEE;
+  justify-content: space-between;
+}
+
+.hero .left {
+  padding: 1rem;
+  width: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero .words {
+  flex-grow: 1;
+}
+
+.hero h1 {
+  color: #F4CE14;
+}
+
+.hero h2 {
+  font-family: 'Markazi Text', serif;
+  font-weight: normal;
+  font-size: 32px;
+  margin: -1rem 0 2rem 0;
+}
+
+.hero img {
+  border-radius: 16px;
+}
+
+/* Specials */
+.specials {
+  height: 700px;
+  width: 858px;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.specials .top {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.specials .cards {
+  justify-content: space-between;
+}
+
+.specials-card {
+  height: 440px;
+  width: 265px;
+  flex-direction: column;
+  border-radius: 16px 16px 0 0;
+}
+
+.specials-card:hover {
+  transform: scale(1.1);
+  transition-duration: .2s;
+}
+
+.specials-card img {
+  border-radius: 16px 16px 0 0;
+}
+
+.specials-card .words {
+  background-color: #EDEFEE;
+  padding: 0 1.5rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+
+.name-price {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name-price h3 {
+  font-family: 'Markazi Text', serif;
+  font-size: 24px;
+}
+
+.name-price span {
+  color: #EE9972;
+  font-weight: bold;
+}
+
+.specials-card a {
+  font-weight: bold;
+}
+
+/* Testimonials */
+
+.testimonials {
+  background-color: #495E57;
+  padding: 4rem 0;
+}
+
+.testimonials-contents {
+  width: 858px;
+  margin: 0 auto;
+}
+
+.testimonials-contents h2 {
+  font-family: 'Markazi Text', serif;
+  font-size: 48px;
+  color: #EDEFEE;
+  margin: 0 auto;
+  font-weight: lighter;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.testimonials-contents>div {
+  width: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.testimonial-card {
+  background-color: #EDEFEE;
+  padding: 2rem;
+  width: 200px;
+  border-radius: 12px;
+  gap: 1rem;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.1);
+  transition-duration: .2s;
+}
+
+.testimonial-card .rating {
+  align-items: baseline;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.testimonial-card .user {
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.testimonial-card .user img {
+  border-radius: 50%;
+}
+
+.story {
+  width: 858px;
+  margin: 0 auto;
+  padding: 3rem 0
+}
+
+.story .words {
+  width: 50%;
+  padding: 0 3rem 0 2rem;
+}
+
+.story h1 {
+  color: #495E57;
+}
+
+.story h2 {
+  font-family: 'Markazi Text', serif;
+  font-weight: normal;
+  font-size: 32px;
+  margin: -1rem 0 1rem 0;
+}
+
+.story img:hover {
+  transform: scale(1.1);
+  transition-duration: .2s;
+}
+
+/* Booking */
+
+.booking {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.booking .cover {
+  padding: 5rem 20rem;
+  background-image: url('./assets/restaurant.png');
+  background-position: center;
+  background-size: cover;
+  color: #EDEFEE;
+  margin: 0 auto;
+}
+
+.booking h1 {
+  margin-bottom: 2rem;
+  color: #F4CE14;
+}
+
+.booking form {
+  justify-content: center;
+}
+
+.form-area {
+  /* width: 30rem; */
+  /* margin: 0 auto; */
+  padding: 3rem;
+  gap: 1rem;
+}
+
+.form-area * {
+  font-family: 'Markazi text', serif;
+  font-size: 30px;
+}
+
+.form-area label {
+  color: #495E57;
+  font-size: 36px;
+}
+
+.form-area input {
+  padding: .5rem;
+  border-radius: 15px;
+  border: 2px solid #495E57;
+  width: 30rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-area input:hover {
+  border: 2px solid #F4CE14;
+  transition-duration: .2s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-area .submit {
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  border-width: 0;
+  background-color: #F4CE14;
+  font-weight: bold;
+  margin-top: 1rem;
+  align-self: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-area .submit:hover {
+  background-color: black;
+  color: #F4CE14;
+  transition-duration: .2s;
 }
 
-.App-link {
-  color: #61dafb;
+.form-area .reset {
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  border-width: 0;
+  background-color: #EDEFEE;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  align-self: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-area .reset:hover {
+  background-color: black;
+  color: #F4CE14;
+  transition-duration: .2s;
 }
