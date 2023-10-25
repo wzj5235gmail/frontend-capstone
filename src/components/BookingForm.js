@@ -1,4 +1,5 @@
 import { useReducer, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const fetchApi = (date) => {
   return [
@@ -32,6 +33,7 @@ export const initializeTimes = () => [];
 
 const BookingForm = () => {
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
+  const navigate = useNavigate();
   const [date, setDate] = useState({
     value: '',
     touched: false
@@ -61,7 +63,7 @@ const BookingForm = () => {
       value: e.target.value,
       touched: true
     });
-    validateDate() && dispatch({ type: 'date', value: date})
+    dispatch({ type: 'date', value: date})
   }
 
   const handleSubmit = () => {
@@ -69,10 +71,10 @@ const BookingForm = () => {
       date, time, diners, occasion
     });
     if (result) {
-      alert('Reservation Successful!')
+      navigate('/confirm');
     }
     else {
-      alert("Reservation Failed!")
+      alert("Reservation Failed!");
     }
   }
 

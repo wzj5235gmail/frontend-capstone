@@ -421,3 +421,9 @@ img {
   font-family: 'Karla', sans-serif;
   font-size: 20px;
 }
+
+.confirmed {
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
