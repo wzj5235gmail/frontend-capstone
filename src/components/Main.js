@@ -1,16 +1,15 @@
-import Hero from "./Hero";
-import Specials from "./Specials";
-import Story from "./Story";
-import Testimonials from "./Testimonials";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./HomePage";
+import BookingForm from "./BookingForm";
 
 const Main = () => {
   return (
-    <main>
-      <Hero />
-      <Specials />
-      <Testimonials />
-      <Story />
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' exact Component={HomePage} />
+        <Route path='/booking' Component={BookingForm} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

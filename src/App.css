@@ -26,7 +26,6 @@ a:hover {
 button {
   padding: .5rem 1rem;
   border-radius: 8px;
-  border-width: 0;
   background-color: #F4CE14;
   font-weight: bold;
 }
@@ -107,10 +106,6 @@ img {
   margin-bottom: .5rem;
 }
 
-.footer a:hover {
-  color: #EE9972;
-}
-
 .footer h3 {
   color: #F4CE14;
   font-weight: bold;
@@ -130,6 +125,7 @@ img {
   border-width: 0;
   background-color: #F4CE14;
   font-weight: bold;
+  color: black;
 }
 
 .hero a:hover {
@@ -373,34 +369,55 @@ img {
   transition-duration: .2s;
 }
 
+.form-area select {
+  padding: .5rem;
+  border-radius: 15px;
+  border: 2px solid #495E57;
+  width: 31.5rem;
+  text-align: center;
+}
+
 .form-area .submit {
   padding: .5rem 1rem;
   border-radius: 8px;
-  border-width: 0;
   background-color: #F4CE14;
   font-weight: bold;
-  margin-top: 1rem;
+  margin-top: 3rem;
   align-self: center;
+  border: none;
 }
 
 .form-area .submit:hover {
   background-color: black;
   color: #F4CE14;
   transition-duration: .2s;
+  border: none;
+}
+
+.form-area .submit:disabled {
+  background-color: #EDEFEE;
+  color:gray;
 }
 
 .form-area .reset {
   padding: .5rem 1rem;
   border-radius: 8px;
-  border-width: 0;
   background-color: #EDEFEE;
   font-weight: bold;
   margin-bottom: 2rem;
   align-self: center;
+  border: none;
 }
 
 .form-area .reset:hover {
   background-color: black;
   color: #F4CE14;
   transition-duration: .2s;
+  border: none;
+}
+
+.error {
+  color: red;
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
 }

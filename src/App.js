@@ -1,17 +1,18 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import FrontPage from './components/FrontPage';
-import BookingPage from './components/BookingPage';
+import BookingForm from './components/BookingForm';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Main from './components/Main';
 
 
 function App() {
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' exact Component={FrontPage} />
-          <Route path='/booking' exact Component={BookingPage} />
-        </Routes>
-      </BrowserRouter>
+    <>
+      <Header />
+      <Main />
+      <Footer />
+    </>
   );
 }
 
